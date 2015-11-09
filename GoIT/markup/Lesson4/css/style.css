@@ -1,6 +1,6 @@
 
  body {
-     background-image: url(../img/background.png); 
+     background: #0C739F url("../img/background.png") repeat-x scroll 0px -36px;
      font: 14px Tahoma, sans-serif;
  }
  
@@ -21,13 +21,13 @@
  }
  
  .header {
- 	height: 213px;
+ 	height: 177px;
  	border-bottom: 1px solid #128aa7;  
  }
  
 .logo{
   float: left;
-  padding: 47px 0 0 28px;
+  padding: 13px 0 0 28px;
   width: 36%;
 }
 
@@ -47,9 +47,14 @@
 }
 
 .countries_list{
-  float: right;
-  padding: 50px 50px 0 100px;
+margin-top: 105px;
+margin-left: 640px;
+text-align: center;
+padding-right: 36px;
+position: absolute;
 }
+
+
 
 .countries_list li{
   float: left;
@@ -71,7 +76,9 @@
  .images {
  	height: 237px;
  	border-bottom: 2px solid #138aa7;
+ background: transparent url("../img/photo.jpg") no-repeat scroll 0px 0px;
  }
+
 
  .clearfix:after{
   content: '';
@@ -84,7 +91,7 @@
 .menu {
   border-bottom: 1px solid #000;
 
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#373737+0,303030+100 */
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#373737+0,303030+100 */
   background: rgb(55,55,55); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,55,55,1)), color-stop(100%,rgba(48,48,48,1))); /* Chrome,Safari4+ */
@@ -93,8 +100,10 @@
   background: -ms-linear-gradient(top,  rgba(55,55,55,1) 0%,rgba(48,48,48,1) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(55,55,55,1) 0%,rgba(48,48,48,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#303030',GradientType=0 ); /* IE6-9 */
-  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
   font-size: 0;
+  position: relative;
+  
 }
 
 
@@ -112,6 +121,7 @@
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  border-bottom: 1px solid black;
 }
 
 .menu ul+a:after {
@@ -129,12 +139,13 @@
 .menu ul {
   
   position: absolute;
-  left: 23px;
-
+  left: 32px;
   visibility: hidden;
   top: 0;
   opacity: 0;
   transition: all 0.5s;
+  box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.6);
+  right: 46px;
 }
 
 .menu li:hover ul {
@@ -145,6 +156,7 @@
 
 .menu ul li {
   background: #303030;
+  box-shadow: -1px 4px 13px 0px rgba(0, 0, 0, 0.55);
 }
 .menu ul a {
   padding: 0 10px;
@@ -153,21 +165,23 @@
 .sidebar_left {
   float: left;
   width: 210px;
-  height: 550px;
+  height: 549px;
   border-right: 1px solid #c7cacf;
   background: #edeef0;
   padding-top: 10px;
   overflow: hidden;
+  margin-top: 1px;
 }
 
 .sidebar_right {
   float: right;
   width: 210px;
-  height: 550px;
+  height: 549px;
   border-left: 1px solid #c7cacf;
   background: #edeef0;
   padding-top: 10px;
   overflow: hidden;
+  margin-top: 1px;
 }
 
 .sidebar_left, .sidebar_right p {
