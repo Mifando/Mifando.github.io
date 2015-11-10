@@ -1,0 +1,133 @@
+* {
+		margin: 0 auto;
+		padding: 0 auto;
+		}
+		
+	body {
+			background: #bfbfbf;
+		}
+	table {
+		margin-top: 200px;
+		border-collapse: collapse;
+		height: 541px;
+	    width: 500px;
+	    vertical-align: middle;
+	    box-shadow: 0px 0px 10px lightgrey;
+	    
+	}	
+	/*td {
+		border: 1px solid black;
+	}*/
+	.line_1 {
+		background: #ffffff;
+		width: 120px;
+		height: 49px;
+		border: 8px solid black;
+		border-left: none;
+		border-top: none;
+	}
+	.line_3 {
+		background: #ffffff;
+		height: 49px;
+		width: 200px;
+		border: 8px solid black;
+		border-top: none;
+	}
+	.line_5 {
+		background: #ffe75a;
+	    height: 49px;
+	    width: 165px;
+	    border: 8px solid black;
+	    border-top: none;
+	    border-right: none;
+	}
+
+	.line_8 {
+		background: #ffffff;
+		height: 130px;
+		width: 47px;
+		border: 8px solid black;
+		border-left: none;
+	}
+	.line_9 {
+		background: #ff5d43;
+		width: 270px;
+		height: 270px;
+		border: 8px solid black;
+	}
+	.line_12 {
+		background: #ffe75a;
+		width: 163px;
+		height: 125px;
+		border: 8px solid black;
+		border-right: none;
+	}
+	.line_19, .line_20 {
+		background: #ffffff;
+		width: 75px;
+		height: 128px;
+		border: 8px solid black;
+		border-right: none;
+	}
+	.line_15 {
+		background: #ffffff;
+		width: 47px;
+		height: 200px;
+		border: 8px solid black;
+		border-left: none;
+	}
+	.line_29 {
+		background: #ffe75a;
+		height: 135px;
+		width: 47px;
+		border: 8px solid black;
+		border-left: none;
+		border-bottom: none;
+	}
+	.line_23, .line_24, .line_30, .line_31 {
+		background: #191919;
+		height: 62px;
+		width: 62px;
+		border: 8px solid black;
+	}
+	.line_25, .line_32 {
+		background: #ffffff;
+		width: 128px;
+		height: 58px;
+		border: 8px solid black;
+	}
+	.line_26 {
+		background: #ffffff;
+		width: 160px;
+		height: 58px;
+		border: 8px solid black;
+		border-right: none;
+	}
+	.line_33 {
+		background: #0d4a8b;
+		height: 95px;
+		width: 160px;
+		border: 8px solid black;
+		border-right: none;
+	}
+	.line_39 {
+		background: #191919;
+		width: 125px;
+		height: 30px;
+		border: 8px solid black;
+	}
+	.line_37 {
+		background: #ffffff;
+		height: 65px;
+		width: 130px;
+		border: 8px solid black;
+		border-bottom: none;
+	}
+	.line_46 {
+		background: #ffffff;
+		width: 300px;
+		height: 30px;
+		border: 8px solid black;
+		border-bottom: none;
+		border-right: none;
+	}
