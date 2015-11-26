@@ -1,59 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Cadastre</title>
+	<title> Cadastre-se</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="top-bar clearfix">
-
-         <p class="enter">
-             Ola! <a href="#">Entrar</a> ou <a href="#">Cadastre-se</a>
-         </p> 
-         <p class="profile">
-             <a href="#">Minhas Ofertas</a>
-         </p>
-     <nav>
-  	  <ul class="menu">
-  	  	<li><a href="#">Meu YouBike</a></li>
-  	  	<li><a href="#">Vender</a></li>
-  	  	<li><a href="#">Forum</a></li>
-  	  	<li><a href="#">Contato</a></li>
-  	  	<li><a href="#">Ajuda</a></li>
-     	</ul>
-     </nav>
-  
- </div> <!-- top-bar -->
-
- <div class="logging">
-     <div class="container-1">
-  	   <h1>Cadastre-Se</h1>
-  	 </div>
-
-  	 <div class="container-2">
-  	   <a href="" class="facebook">
-        <span>Log In</span> with 
-        <span>Facebook</span>
-       </a>
-
-  	   <p>OU</p>
-  	   <form action="#">
-  	     <input type="text" placeholder="First Name" required>
-  	     <input type="text" placeholder="Last Name">
-  	     <input type="text" placeholder="Email Address">
-  	     <input type="password" placeholder="Choose Password">
-  	     <input type="password" placeholder="Passwors Confirm">
-  	     <div class="subscribe">
-           <label><input type="checkbox">Send me Youbike updates and tips</label>
-         </div>  	      
-  	     <input type="submit" value="Create my Account">
-  	   	 <p class="privacy">By clicking the button above, you agree to the Terms of Service Xiew our Privacy Policy</p>
-  	   </form>
-
-  	 </div>
-  </div>
-	
+<div class="main">
+<header>
+		<div class="cadastre">
+			Ola!
+			<a href="#">Entrar</a> ou <a href="#">Cadastre-se</a>
+		</div>
+		<div class="task">
+			<img src="img/inventicons.png" alt="" />Minhas Ofertas
+		</div>
+		<div class="profile">
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="#">Meu YouBike</a></li>
+				<li><a href="#">Vender</a></li>
+				<li><a href="#">Forum</a></li>
+				<li><a href="#">Contato</a></li>
+				<li><a href="#">Ajuda</a></li>
+			</ul>
+		</div>
+	</header>
+		<div class="wrapper">
+			
+			<div class="head">Cadastre-se
+			</div>
+			<div class="form">
+				<div class="form_input">
+					<form id="CreateAccount" action="#" method="post">
+						<div>
+							<a href="" class="button-fb fb">Log In <span>with</span> Facebook</a>
+						</div>
+						<span>OU</span>
+						<input type="text" name="name" value="" placeholder="First Name" required>
+						<input type="text" name="name" value="" placeholder="Last Name">
+						<input type="email" name="name" value="" placeholder="Email Address" required>
+						<input type="password" name="name" value="" placeholder="Choose Password" required>
+						<input type="password" name="name" value="" placeholder="Password Confirm" required>
+						<div class="checkbox">
+							<div class="option">
+								<input type="checkbox" name="name" id="send_updates" value="">
+								<label for="send_updates"></label>
+							</div>
+							Send me Youbike updates and tips
+						</div>
+						<button>Create My Account</button>
+					</form>
+					<p>
+						By clicking the button above, you agree to the Terms of Service
+					</p>
+					<p>
+						Xiew our Privacy Policy.
+					</p>
+				</div>
+			</div>
+		</div>	
+</div>
 </body>
 </html>
