@@ -1,28 +1,48 @@
-@import url(reset.css);
-
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
-    padding: 20px 90px;
-    font-family: sans-serif;
+    font-size: 19px;
+    line-height: 20px;
 }
+ul > li {
+    list-style: none;
+}
+
+input[type='checkbox'] {
+    margin-right: 10px;
+}
+.wrapper {
+    width: 680px;
+    margin: 40px auto;
+}
+
 h1 {
-    margin-bottom: 30px;
     text-align: center;
-    font-size: 25px;
+    font-size: 19px;
+    letter-spacing: -0.2px;
+    margin-bottom: 46px;
 }
-p {
-    margin: 15px 0;
-    font-size: 20px;
+.inner__list {
+    margin: 15px 0 15px;
 }
 label {
-    display: block;
-    text-indent: 25px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    padding-left: 25px;
+    margin: 4px 0;
 }
-input[type="submit"] {
+input[type="checkbox"] {
+    font-size: 19px;
+}
+.check-result {
+    font-size: 19px;
+    margin: 47px auto;
     display: block;
-    margin: 50px auto;
-    height: 50px;
-    width: 320px;
-    border: 2px solid rgb(0, 2, 7);
-    background-color: rgb(207, 225, 245);
-    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 3px;
+    padding: 10px 40px;
+    background: rgba(182, 222, 232, 0.8);
 }
