@@ -1,140 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>PINGBULLER</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <title>Pingbuller</title>
 </head>
 <body>
-    <header>
-            <div class="logo"><img src="img/logo.png" alt=""></div>
-        <ul class="navigation navigation--header">
-            <li class="navigation__home"><a href="#">HOME</a></li>
-            <li class="navigation__dropdown"><a href="#">ABOUT</a></li>
-            <li class="navigation__dropdown"><a href="#">BLOG</a></li>
-            <li class="navigation__dropdown"><a href="#">PRODUCTS</a></li>
-            <li class="navigation__dropdown"><a href="#">LOREM IPSUM</a></li>
-            <li class="navigation__dropdown"><a href="#">DOLOR SIT AMET</a></li>
-        </ul>
-    </header>
-    <div class="slider">
-        <div class="left_arrow"><a href="#"><img src="img/left_arrow.png" alt=""></a></div>
-        <div class="slider__content">
-            <article class="slider__text">
-                <h1>Lorem Ipsum Dolor</h1>
-                <h2>IT WILL MAKE ALL YOUR DREAMS COME TRUE</h2>
-                <p>Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
-            </article>
-            <div class="slider__img">
-                <img src="img/iphone.png" alt="">
-            </div>
-        </div>
-        <div class="right_arrow"><a href="#"><img src="img/right_arrow.png" alt=""></a></div>
-    </div>
-    <div class="dot_navigation">
-        <div class="circle"><a href="#"></a></div>
-        <div class="circle active"><a href="#"></a></div>
-        <div class="circle"><a href="#"></a></div>
-        <div class="circle"><a href="#"></a></div>
-    </div>
-    <div class="info">
-        <div class="info__container">
-            <div class="info__about info__about--first">
-                <h2>ABOUT OUR COMPANY</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="info__about info__about--second">
-                <h2>ABOUT OUR COMPANY</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="info__about info__about--third">
-                <h2>ABOUT OUR COMPANY</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar.</p>
-                <a href="#">READ MORE</a>
-            </div>
-        </div>
-    </div>
-    <div class="shadow">
-        <img src="img/box_shadow.png" alt="">
-    </div>
-    <div class="news">
-        <div class="container">
-            <div class="left_block">
-                <div class="comment">
-                    <h2>PINGBULLER <span>STARTS HERE</span></h2>
-                    <p>“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
+
+<div class="wrapper">
+    <div class="top-part">
+        <header>
+            <div class="section-wrapper">
+
+                <div class="header-logo">
+                    <img src="img/logo.png" alt="Pingbuller" class="header-logo__image"/>
                 </div>
-                <div class="dot_navigation dot_navigation--white">
-                        <div class="circle"><a href="#"></a></div>
-                        <div class="circle active"><a href="#"></a></div>
-                        <div class="circle"><a href="#"></a></div>
-                        <div class="circle"><a href="#"></a></div>
+
+                <nav>
+
+                    <ul class="main-nav">
+                        <li class="main-nav-item"><a href="" class="main-nav-item__link">home</a></li>
+                        <li class="main-nav-item"><a href="" class="main-nav-item__link">about</a></li>
+                        <li class="main-nav-item"><a href="" class="main-nav-item__link">blog</a></li>
+                        <li class="main-nav-item"><a href="" class="main-nav-item__link">products</a></li>
+                        <li class="main-nav-item"><a href="" class="main-nav-item__link">lorem ipsum</a></li>
+                        <li class="main-nav-item"><a href="" class="main-nav-item__link">dolor sit amet</a></li>
+                    </ul>
+
+
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-selected-item">
+                            <span class="dropdown-menu-selected-item__link">home</span>
+                        </div>
+                        <ul id="mobile-nav" class="main-nav">
+                            <li class="main-nav-item"><a href="" class="main-nav-item__link">about</a></li>
+                            <li class="main-nav-item"><a href="" class="main-nav-item__link">blog</a></li>
+                            <li class="main-nav-item"><a href="" class="main-nav-item__link">products</a></li>
+                            <li class="main-nav-item"><a href="" class="main-nav-item__link">lorem ipsum</a></li>
+                            <li class="main-nav-item"><a href="" class="main-nav-item__link">dolor sit amet</a></li>
+                        </ul>
                     </div>
-            </div>  
-            <div class="updates">
-                <h2>RECENT UPDATES</h2>
-                <div class="up up_news">
-                    <a href="#">Nunc turpis neque feugiat eget</a>
-                    <p>Posted by Admin on 13 2012 in Recent News</p>
+                </nav>
+
+            </div>
+        </header>
+
+        <section class="slider">
+            <div class="slider-directions">
+                            <div class="slider-directions_left"></div>
+                            <div class="slider-directions_right"></div>
+            </div>
+            <div class="section-wrapper">
+                <div class="slider-wrapper">
+                    <div class="slider-holder">
+                        <div class="slider-holder-slide">
+                            <div class="slider-description">
+                                <h1 class="slider-description__title">Lorem Ipsum Dolor</h1>
+                                <h2 class="slider-description__subtitle">It will make all of your dreams come true</h2>
+                                <p class="slider-description__text">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
+                            </div>
+                            <div class="slider-image">
+                                <div class="slider-image__action"></div>
+                                <img src="img/slider_iphone.png" alt=""/>
+                            </div>
+                        </div>                      
+
+                    </div>
                 </div>
-                <div class="up up_cata">
-                    <a href="#">Nunc turpis neque feugiat eget</a>
-                    <p>Posted by Admin on 13 2012 in Category</p>
+                
+                <ul class="dots-nav">
+                    <li class="dots-nav-item"></li>
+                    <li class="dots-nav-item isActive"></li>
+                    <li class="dots-nav-item"></li>
+                    <li class="dots-nav-item"></li>
+                </ul>                
+
+            </div>
+        </section>
+
+
+    </div>
+
+    <section class="about">
+        <div class="section-wrapper">
+
+            <div class="about-item about-item_key">
+                <h3 class="about-item__title">About our company</h3>
+                <p class="about-item__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
+                <a href="" class="about-item__link">Read more</a>
+            </div>
+
+            <div class="about-item about-item_dialog">
+                <h3 class="about-item__title">About our company</h3>
+                <p class="about-item__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
+                <a href="" class="about-item__link">Read more</a>
+            </div>
+
+            <div class="about-item about-item_melody">
+                <h3 class="about-item__title">About our company</h3>
+                <p class="about-item__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
+                <a href="" class="about-item__link">Read more</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="section-wrapper">
+
+            <div class="info-testimonials">
+                <div class="info-testimonials-holder">
+
+                    <div class="info-testimonials-item">
+                        <img src="img/testimonial-avatar.png" alt="" class="info-testimonials-item__avatar"/>
+                        <div class="info-testimonials-item-title">Pingbuller <span class="distinguished">starts here</span></div>
+                        <div class="info-testimonials-item__text">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</div>
+                    </div>                 
+
                 </div>
-                <div class="up up_blog">
-                    <a href="#">Nunc turpis neque feugiat eget</a>
-                    <p>Posted by Admin on 13 2012 in Blog Updates</p>
-                </div>
-                <a href="#">READ MORE HERE</a>
+
+                
+                <ul class="dots-nav">
+                    <li class="dots-nav-item"></li>
+                    <li class="dots-nav-item isActive"></li>
+                    <li class="dots-nav-item"></li>
+                    <li class="dots-nav-item"></li>
+                </ul>
+                
+
+            </div>
+
+            <div class="info-blog-updates">
+                <div class="info-blog-updates__title">Recent updates</div>
+                <ul class="info-blog-updates-list">
+                    <li class="info-blog-updates-list-item">
+                        <img src="img/blog-updates_01.png" alt="" class="info-blog-updates-list-item__img"/>
+                        <div class="info-blog-updates-list-item__title">Nunc turpis neque feugiat eget </div>
+                        <div class="info-blog-updates-list-item__details">Posted by <span class="author">Admin</span> on <span class="date">March 13 2012</span> in <span class="category">Recent News</span></div>
+                    </li>
+                    <li class="info-blog-updates-list-item">
+                        <img src="img/blog-updates_02.png" alt="" class="info-blog-updates-list-item__img"/>
+                        <div class="info-blog-updates-list-item__title">Nunc turpis neque feugiat eget </div>
+                        <div class="info-blog-updates-list-item__details">Posted by <span class="author">Admin</span> on <span class="date">March 13 2012</span> in <span class="category">Category</span></div>
+                    </li>
+                    <li class="info-blog-updates-list-item">
+                        <img src="img/blog-updates_03.png" alt="" class="info-blog-updates-list-item__img"/>
+                        <div class="info-blog-updates-list-item__title">Nunc turpis neque feugiat eget </div>
+                        <div class="info-blog-updates-list-item__details">Posted by <span class="author">Admin</span> on <span class="date">March 13 2012</span> in <span class="category">Blog Updates</span></div>
+                    </li>
+                </ul>
+                <a href="" class="info-blog-updates__link">Read more here</a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="clients">
+        <div class="section-wrapper">
+            <div class="clients-holder">
+                <img src="img/clients_logo_01.png" alt="" class="clients-holder__image"/>
+                <img src="img/clients_logo_02.png" alt="" class="clients-holder__image"/>
+                <img src="img/clients_logo_03.png" alt="" class="clients-holder__image"/>
+                <img src="img/clients_logo_04.png" alt="" class="clients-holder__image"/>
+                <img src="img/clients_logo_05.png" alt="" class="clients-holder__image"/>
+                <img src="img/clients_logo_06.png" alt="" class="clients-holder__image"/>
             </div>
         </div>
-    </div>
-    <div class="logos"></div>
-    <div class="news2">
-        <div class="news2__container">
-            <div class="pingbuller">
-                <img src="img/logo2.png" alt="">
-                <p class="copyright">Copyright 2013, Pingbull AS</p>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+    </section>
+
+
+    <section class="updates">
+        <div class="section-wrapper">
+
+            <div class="updates-column">
+                <div class="updates-column-logo">
+                    <img src="img/bottom-logo.png" alt="" class="updates-column-logo__image"/>
+                </div>                
+                <div class="updates-column__copyright">Copyright 2013, Pingbull AS</div>
+                <p class="updates-column__text">Nunc turpis neque, feugiat eget eleif- end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pul-</p>
             </div>
-            <div class="comments">
-                    <a href="#">RECENT COMMENTS</a>
-                    <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+
+            <div class="updates-column">
+                <h3 class="updates-column__title">Recent comments</h3>
+                <p class="updates-column__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis</p>
             </div>
-            <div class="categories">
-                <a href="#">NEWS CATEGORIES</a>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+
+            <div class="updates-column">
+                <h3 class="updates-column__title">News categories</h3>
+                <p class="updates-column__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis</p>
             </div>
-            <div class="categories categories_2">
-                <a href="#">NEWS CATEGORIES</a>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-            </div>
-            <div class="categories categories_3">
-                <a href="#">NEWS CATEGORIES</a>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-            </div>
+
         </div>
-    </div>
-    <div class="shadow">
-        <img src="img/box_shadow.png" alt="">
-    </div>
+    </section>
+
     <footer>
-        <div class="foot_container">
-            <ul class="navigation navigation--footer">
-                <li class="navigation__home"><a href="#">HOME</a></li>
-                <li class="navigation__dropdown"><a href="#">ABOUT</a></li>
-                <li class="navigation__dropdown"><a href="#">BLOG</a></li>
-                <li class="navigation__dropdown"><a href="#">PRODUCTS</a></li>
-                <li class="navigation__dropdown"><a href="#">LOREM IPSUM</a></li>
-                <li class="navigation__dropdown"><a href="#">DOLOR SIT AMET</a></li>
+        <div class="section-wrapper">
+
+            <ul class="main-nav">
+                <li class="main-nav-item"><a href="" class="main-nav-item__link">home</a></li>
+                <li class="main-nav-item"><a href="" class="main-nav-item__link">about</a></li>
+                <li class="main-nav-item"><a href="" class="main-nav-item__link">blog</a></li>
+                <li class="main-nav-item"><a href="" class="main-nav-item__link">products</a></li>
+                <li class="main-nav-item"><a href="" class="main-nav-item__link">lorem ipsum</a></li>
+                <li class="main-nav-item"><a href="" class="main-nav-item__link">dolor sit amet</a></li>
             </ul>
-            <p class="designed">Designed by <span>Pingbull AS</span></p>
+
+            <div class="footer-copyright">Designed by <span class="footer-copyright__author">Pingbull AS</span></div>
+
         </div>
+
     </footer>
-    
+
+</div>
 </body>
 </html>
