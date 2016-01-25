@@ -285,7 +285,6 @@ header {
         bottom: -6px;
         width: 30px;
         height: 30px;
-        box-shadow: 1px 1px 2px #efefef;
         background-color: white;
         transform: rotate(32deg) skew(30deg); }
       .info-testimonials-item__avatar {
