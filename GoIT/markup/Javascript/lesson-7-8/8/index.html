@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta charset="UTF-8" />
+	<title>HW-JS-8</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" />
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="js/script.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<form action = "#" class = "forma">
-		<div class = 'forAll'>
-			<div class = 'boxForFirstName box'>
-				<label class = "lb" for = "firstName">First name</label>
-				<input type = "text" id = "firstName" class = "inpt" title="Please provide your first name">
-				<!--<span class = "hint fName">Please provide your first name</span>-->
+	
+	<div class="container">
+
+		<form action="" class="form-horizontal">
+
+			<div class="form-group">
+				<label for="text1" class="col-sm-2 control-label">Firstname</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="text1" placeholder='Please enter this field' title='Firstname'>
+					</div>
 			</div>
-			<div class = 'boxForLastName box'>
-				<label class = "lb" for = "lastName">Last name</label>
-				<input type = "text" id = "lastName" class = "inpt" title="Please provide your last name">
-				<!--<span class = "hint lName">Please provide your last name</span>-->
+
+			<div class="form-group">
+				<label for="text2" class="col-sm-2 control-label">Lastname</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="text2" placeholder='Please enter this field' title='Lastname'>
+					</div>
 			</div>
-			<div class = 'boxForAdrees box'>
-				<label class = "lb" for = "address">Address</label>
-				<input type = "text" id = "address" class = "inpt" title="Your home or work address">
-				<!--<span class = "hint addr">Your home or work address</span>-->
-			</div>
-		</div>
-		<button class = 'showH'>Show help</button>
-	</form>
+			
+			<div class="form-group">
+				<label for="text3" class="col-sm-2 control-label">Address</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="text3" placeholder='Please enter this field' title='Address'>
+					</div>
+			</div
+		</form>
+		<button class="btn btn-lg btn-default">Show all tooltips</button>
+	</div>
+
 </body>
 </html>
+
+
