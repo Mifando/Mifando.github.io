@@ -1,87 +1,105 @@
- 'use strict';
-$(function(){
-    var html = $('#user_tmpl').html();
-    var questions = [
-                {   question: 'Кто стал родоначальником футбола?',
-                    answer1: 'Бразилия',
-                    answer2: 'Англия',
-                    answer3: 'Германия',
-                    key: 1
-               },
-               {    question: 'Какой клуб становился больше всех победителем лиги чемпионов?',
-                    answer1: "Реал",
-                    answer2: "Милан",
-                    answer3: "Ливерпуль",
-                    key: 1
-               },
-               {    question: 'Первый чемпион украины по футболу?',
-                    answer1: "Динамо",
-                    answer2: "Шахтер",
-                    answer3: "Таврия",
-                    key: 3
-               }];
-    
-   var content = tmpl(html, {data : questions});
-    $('body').append(content);
-    
+    'use strict';
+    var questions = {
+    '1': {
+        'title': 'What is HTML?',
+        'answers': [
+            'How To Make Landingpage',
+            'Hypertext Markup Language',
+            'Objective Programming Language'
+            
+        ],
+        'check': 1
+        },
+    '2': {
+        'title': 'What is CSS?',
+        'answers': [
+            'Censor Sold Solar System',
+            'Central Sugar Station',
+            'Cascading Style Sheets'
+        ],
+        'check':2
+        },
+    '3': {
+        'title': 'What is JavaScript?',
+        'answers': [
+            'Analog of Java with more functions',
+            'High-level interpreted programming language',
+            'Language of Javas in Star Wars'
+        ],
+        'check':1
+       },
+}
    
-    $('.checkbox').on('click', function(){
-    $(this).parent().siblings().children().filter(':checked').not(this).removeAttr('checked');
-    });
+    var temp={};
+
+       for (var key in questions){
+
+          localStorage.setItem('answersAndQuestion[key]', JSON.stringify(questions[key]));      //записали в localStorage
+          temp[key] = localStorage.getItem('answersAndQuestion[key]');                        //вытащили из localStorage
+          temp[key] = JSON.parse(temp[key]);
+       }
+ 
+    var htmlka = $('#test').html();
+    var content = tmpl(htmlka, temp);  //сгенерировали контент
+        $('[type=submit]').before(content);         //вставили перед кнопкой
+
+ 
+    //только один checkbox
+    $('.checkbox').on('click', change);
     
-    
-    var str = JSON.stringify(questions);
-    var obj = JSON.parse(str);
-    
-    var $modal_window = $('.modal_window');
-    var $modal_answers = $modal_window.children();
-    var $tryAgain_button = $('.try_again');
-    
-    
-    $('.button').on('click', check); 
-    $tryAgain_button.on('click', function(){
-        $modal_window.hide();
-        $('.checkbox').removeAttr('checked');
-    });
-                    
-    function check(){
-    if($('.answer_label_1').eq(1).children().prop('checked')){
-       $modal_answers.eq(0).children().eq(1).html('Правильно').css({
-            'color': 'green',
-            'font-weight' : 'bold'
-        });
-     }else{
-         $modal_answers.eq(0).children().eq(1).html('Нет').css({
-            'color': 'red',
-            'font-weight' : 'bold'
-        });
-     }
+      function change(){
+        $(this).parent().siblings().children().filter(':checked').not(this).removeAttr('checked');
+      }
+
+    //событие на кнопку
+    var submit = $('input[type="submit"]');
+        submit.one('click', checking);
+   
+    //проверка ответов
+      function checking(){
+        var answersBlock = $('.answersBlock');
+        var checkedAnswers=[];        //массив для отмеченных ответов
+          $('.answersBlock input:checkbox:checked').each(function(){
+              var id = $(this).attr('id');
+              var numberOfQuestion = id.substr(0,1); //узнали номер вопроса
+              var index = +numberOfQuestion-1;
+              var numberOfAnswer = id.substr(2);// узали номер ответа (первый, второй или третий)
+              checkedAnswers[index] = +numberOfAnswer;  
+          });
+              console.log(checkedAnswers);
        
-       if($('.answer_label_2').eq(0).children().prop('checked')){
-       $modal_answers.eq(1).children().eq(1).html('Правильно').css({
-            'color': 'green',
-            'font-weight' : 'bold'
-        });
-     }else{
-        $modal_answers.eq(1).children().eq(1).html('Нет').css({
-            'color': 'red',
-            'font-weight' : 'bold'
-        });
-     } 
-        
-       if($('.answer_label_3').eq(2).children().prop('checked')){
-       $modal_answers.eq(2).children().eq(1).html('Правильно').css({
-            'color': 'green',
-            'font-weight' : 'bold'
-        });
-     }else{
-        $modal_answers.eq(2).children().eq(1).html('Нет').css({
-            'color': 'red',
-            'font-weight' : 'bold'
-        });
-     } 
-        $modal_window.show();
-        
+          var arrResult =[]; //  массив с результатом теста для пользователя
+            for(var j=0; j<answersBlock.length; j++){
+                console.log('Правильный ответ:', temp[j+1].check);
+              if(checkedAnswers[j]){ // если был отмеченным ответ на вопрос, то сравниваем
+                  var check = temp[j+1].check;// достали правильный ответ из начального объекта
+                  if (checkedAnswers[j] === check){ //сравнили
+                    arrResult[j]='<span style="color:green">Правильный ответ!</span>';
+                  } else{ arrResult[j]='Не правильный ответ!';
+                    }
+              } else {
+                  arrResult[j]='Не правильный ответ!'; // если не было галочки, значит ошибка!
+                }     
+            }//for
+
+      event.preventDefault();
+      var modal = $('<div class="modal"><h3>Результаты теста</h3></div>');
+      var wrapper = $('.wrapper');
+          wrapper.append(modal); // формируем модальное окно с результатами
+      
+          for (var z=0; z<answersBlock.length; z++){
+               var questionDiv = $('<div class="questionTitle">'+(z+1)+'.'+temp[z+1].title+'</div>');
+               modal.append(questionDiv);
+               var answerDiv = $('<div class="answer warning">'+arrResult[z]+'</div>');
+               modal.append(answerDiv);
+          }
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+    var div = $(".modal"); 
+    
+    if (!div.is(e.target)&& div.has(e.target).length === 0) { 
+      div.hide; // скрываем его
+      location.reload();
     }
-   
-});
+  });
+    
+    }//function 'checking'
